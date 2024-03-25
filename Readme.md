@@ -25,23 +25,22 @@ Here's what you need to be able to run WhistleBlower:
 
 - Node.js
 - MongoDB Database - connection string
-- POLYGON_TESTNET_URL or RPC_PROVIDER 
 
 #### First Clone the repository
 
 ```shell
-git clone https://github.com/Gourav-21/Polygon-WhistleBlower.git
+git clone https://github.com/Gourav-21/Botanix-WhistleBlower.git
 
 ```
 
 ### Set up the contract
 
-#### 1. Deploy the smart contract on the Polygon testnet
+#### 1. Deploy the smart contract on the Botanix testnet
 
-go to the node folder Polygon-WhistleBlower
+go to the node folder Botanix-WhistleBlower
 
 ```shell
-cd Polygon-WhistleBlower
+cd Botanix-WhistleBlower
 ```
 
 #### 2. Install npm dependencies
@@ -50,17 +49,16 @@ cd Polygon-WhistleBlower
 npm install
 ```
 
-#### 3. change the url and accounts in hardhat.config.js
+#### 3. change the value of of `BOTANIX_TESTNET_PRIVATE_KEY` in hardhat.config.js
 
 ```shell
-url:"YOUR_POLYGON_TESTNET_URL"
-accounts:["YOUR_PRIVATE_KEY"]
+BOTANIX_TESTNET_PRIVATE_KEY:"YOUR_PRIVATE_KEY"
 ```
 
 #### 4. run
 
 ```shell
-npx hardhat ignition deploy ./ignition/modules/Posts.ts --network matic
+npx hardhat ignition deploy ./ignition/modules/Posts.ts --network botanixTestnet
 ```
 
 #### 4. copy the `contract address` from terminal
@@ -94,8 +92,6 @@ cp .env.example .env.local
 The following environment variables must be set:
 
 - `NEXT_PUBLIC_CONTRACT_ADDRESS` - The contract address of the WhistleBlower smart contract
-
-- `NEXT_PUBLIC_RPC_PROVIDER` - The api of your rpc provider
 
 - `MONGODB_URI` - The connection string for the MongoDB database
 
