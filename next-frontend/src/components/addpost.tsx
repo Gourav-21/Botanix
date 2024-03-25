@@ -33,6 +33,9 @@ export default function AddPostside(props) {
       const signer = await provider.getSigner()
       const contract = new Contract(process.env.NEXT_PUBLIC_CONTRACT_ADDRESS, Posts.abi, signer)
       const tx = await contract.createPost(msg.title,msg.description,msg.date.toISOString())
+      toast({
+        description: "executing...",
+      })
       await tx.wait()
       console.log("executing...");
       toast({
