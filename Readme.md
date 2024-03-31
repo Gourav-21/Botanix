@@ -127,6 +127,6 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### Demo Video:
 
-https://www.youtube.com/watch?v=gEg9Jlg3IJ4&feature=youtu.be
+https://youtu.be/VuVHm333NQM
 
 [![Whistleblower](WhistleBlower.gif)](https://youtu.be/VuVHm333NQM)
